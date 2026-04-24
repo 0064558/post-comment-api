@@ -2,6 +2,7 @@ package com.example.postcommentapi.resources.exception;
 
 import java.io.Serializable;
 
+// Classe para padronizar a resposta de erros nas APIs REST do projeto, contendo informações como timestamp, status, mensagem de erro e caminho da requisição.
 public class StandardError implements Serializable {
     private static final long serialVersionUID = 1L;
     private Long timestamp;

@@ -4,6 +4,7 @@ import com.example.postcommentapi.domain.User;
 
 import java.io.Serializable;
 
+// DTO (Data Transfer Object) é uma classe simples que tem a função de transportar dados entre processos, sem conter lógica de negócio. Ele é usado para evitar expor a estrutura interna do modelo de domínio e para otimizar a transferência de dados, especialmente em casos onde o modelo de domínio é complexo ou contém informações sensíveis.
 public class UserDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 

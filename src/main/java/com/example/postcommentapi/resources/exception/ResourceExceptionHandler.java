@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
+// Classe para tratar as exceções de forma global, ou seja, para todas as classes de recurso. Ela intercepta as exceções lançadas e retorna uma resposta personalizada com informações sobre o erro. Neste caso, ela trata a exceção ObjectNotFoundException, que é lançada quando um objeto não é encontrado no banco de dados. A resposta inclui o status HTTP 404 (Not Found), uma mensagem de erro e o caminho da requisição que causou o erro.
 @RestControllerAdvice
 public class ResourceExceptionHandler {
 
