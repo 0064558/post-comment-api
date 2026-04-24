@@ -2,6 +2,7 @@ package com.example.postcommentapi.services;
 
 import com.example.postcommentapi.domain.User;
 import com.example.postcommentapi.repository.UserRepository;
+import com.example.postcommentapi.services.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +15,14 @@ public class UserService {
 
     public List<User> findAll() {
         return repo.findAll();
+    }
+
+    public User findById(String id) {
+        User user = repo.findById(id).orElse(null);
+
+        if (user == null) {
+            throw new ObjectNotFoundException("User not found. Id: " + id);
+        }
+        return user;
     }
 }
